@@ -2,6 +2,22 @@
 @import "../_global";
 
 /*  Mobile style */
-header {
-    background: linear-gradient(97deg, $very-light-red-bg-grad, $light-red-bg-grad);
+.header {
+    position: relative;
+    width: 100%;
+
+    &__desktop-nav {
+        display: none;
+    }
+
+    &__logo {
+        display: inline-block;
+        width: 20%;
+    }
+
+    &__mobile-nav {
+        span {
+            display: block;
+        }
+    }
 }

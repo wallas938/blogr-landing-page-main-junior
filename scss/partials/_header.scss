@@ -1,0 +1,7 @@
+@import "../variables";
+@import "../_global";
+
+/*  Mobile style */
+header {
+    background: linear-gradient(97deg, $very-light-red-bg-grad, $light-red-bg-grad);
+}

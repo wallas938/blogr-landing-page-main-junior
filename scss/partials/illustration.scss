@@ -1,0 +1,84 @@
+@import "../global";
+@import "variables";
+
+.illustration {
+    text-align: center;
+    padding: 5rem 0;
+
+    h2 {
+        color: $very-dark-blue-headings;
+    }
+
+    .illustration1 {
+
+        > h2 {
+            margin: 2rem 0;
+        }
+
+        div:not(:first-child) {
+            padding: 0 2.5rem 3rem 2.5rem;
+
+            h2 {
+                margin-bottom: 1rem
+            }
+
+            p {
+                color: $very-dark-grayish-blue-body-copy;
+            }
+        }
+    }
+
+    .illustration2 {
+        position: relative;
+        padding-bottom: 4rem;
+        &::before {
+            content: "";
+            background-color: $very-dark-gray-blue-body;
+            background-image: url(../../assets/images/bg-pattern-circles.svg), -webkit-linear-gradient(bottom, $very-dark-gray-blue-body, $very-dark-desaturated-blue);
+            background-repeat: no-repeat;
+            background-position: right top;
+            background-size: contain;
+            position: absolute;
+            top: 25%;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            border-radius: 0 100px 0 100px;
+        }
+
+        div:not(:first-child) {
+            padding: 0 2rem 3rem 2rem;
+
+            h2 {
+                margin-bottom: 1rem;
+                color: $white-text;
+            }
+
+            p {
+                color: $very-dark-grayish-blue-body-copy;
+                color: $white-text;
+            }
+        }
+    }
+
+    .illustration3 {
+        margin-top: 5rem;
+
+        >h2 {
+            margin: 2rem 0;
+        }
+
+        div:not(:first-child) {
+            padding: 0 2.5rem 3rem 2.5rem;
+
+            h2 {
+                margin: 1.5rem 0;
+            }
+
+            p {
+                color: $very-dark-grayish-blue-body-copy;
+            }
+        }
+    }
+}

@@ -3,4 +3,37 @@
 
 .hero {
     position: relative;
+    color: $white-text;
+    text-align: center;
+    padding: 3rem 2rem;
+    font-family: $overpass;
+
+    h1 {
+        font-weight: 600;
+        margin: .7rem 0;
+    }
+
+    p {
+        @extend %p-paragraph;
+        color: $white-text;
+        margin: 0  0 3rem 0;
+    }
+
+    &__cta  {
+        display: flex;
+        justify-content: space-evenly;
+        button {
+            @extend %btn-style;
+
+            &:nth-child(1) {
+                color: $light-red-for-cta-text;
+            }
+
+            &:nth-child(2) {
+                background-color: transparent;
+                border: 1px solid white;
+                color: white;
+            }
+        }
+    }
 }

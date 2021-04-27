@@ -21,6 +21,7 @@ img {
     position: relative;
     z-index: -10;
     overflow: hidden;
+    padding-bottom: 5rem;
     border-radius: 0 0 0 80px;
     > img {
         position: absolute;
@@ -29,4 +30,12 @@ img {
         transform: scale(4);
         z-index: -1;
     }
+}
+
+h2 {
+  @extend %h2-heading;
+}
+
+p {
+  @extend %p-paragraph;
 }

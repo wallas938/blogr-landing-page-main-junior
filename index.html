@@ -7,8 +7,8 @@
   <!-- displays site properly based on user's device -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,300;0,900;1,600&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 
   <title>Frontend Mentor | [Blogr]</title>
@@ -68,15 +68,13 @@
         </div>
       </nav>
       <nav class="header__mobile-nav">
-        <span>_</span>
-        <span>_</span>
-        <span>_</span>
+        <img src="assets/images/icon-hamburger.svg" alt="icon-hamburger" srcset="">
       </nav>
     </header>
     <section class="hero">
       <h1> A modern publishing platform</h1>
       <p>Grow your audience and build your online brand</p>
-      <div class="hero__btns">
+      <div class="hero__cta">
         <button>Start for Free</button>
         <button>Learn More</button>
       </div>
@@ -85,8 +83,12 @@
   <section class="illustration">
     <div class="illustration1">
       <h2>Designed for the future</h2>
+      <div class="illustration1__image">
+        <img src="assets/images/illustration-editor-mobile.svg" srcset="assets/images/illustration-editor-mobile.svg 1439w,
+        assets/images/illustration-editor-desktop.svg 1440w" alt="">
+      </div>
       <div>
-        <h3>Introducing an extensible editor</h3>
+        <h2>Introducing an extensible editor</h2>
         <p>Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content.
           The editor supports management of multiple blogs and allows easy manipulation of embeds such as images,
           videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or
@@ -94,18 +96,17 @@
         </p>
       </div>
       <div>
-        <h3>Robust content management</h3>
+        <h2>Robust content management</h2>
         <p>
           Flexible content management enables users to easily move through posts. Increase the usability of your blog
           by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
         </p>
       </div>
-      <div class="illustration1__image">
-        <img src="assets/images/illustration-editor-mobile.svg" srcset="assets/images/illustration-editor-mobile.svg 1439w,
-        assets/images/illustration-editor-desktop.svg 1440w" alt="">
-      </div>
     </div>
     <div class="illustration2">
+      <div class="illustration2__image">
+        <img src="assets/images/illustration-phones.svg" alt="">
+      </div>
       <div>
         <h2>State of the Art Infrastructure</h2>
         <p>
@@ -113,20 +114,21 @@
           This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
         </p>
       </div>
-      <div class="illustration2__image">
-        <img src="assets/images/illustration-phones.svg" alt="">
-      </div>
     </div>
     <div class="illustration3">
+      <div class="illustration3__image">
+        <img src="assets/images/illustration-laptop-mobile.svg" srcset="assets/images/illustration-laptop-mobile.svg 1439w,
+        assets/images/illustration-laptop-desktop.svg 1440w" alt="">
+      </div>
       <div>
-        <h3>Free, open, simple</h3>
+        <h2>Free, open, simple</h2>
         <p>Blogr is a free and open source application backed by a large community of helpful developers. It supports
           features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools,
           and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
         </p>
       </div>
       <div>
-        <h3>Powerful tooling</h3>
+        <h2>Powerful tooling</h2>
         <p>
           Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a
           breeze,
@@ -134,13 +136,9 @@
           capable of producing even the most complicated sites.
         </p>
       </div>
-      <div class="illustration3__image">
-        <img src="assets/images/illustration-laptop-mobile.svg" srcset="assets/images/illustration-laptop-mobile.svg 1439w,
-        assets/images/illustration-laptop-desktop.svg 1440w" alt="">
-      </div>
     </div>
   </section>
-  <footer>
+  <footer class="footer">
     <div class="logo">
       <img src="assets/images/logo.svg" alt="blogr">
     </div>
@@ -165,63 +163,11 @@
       <span>Newsletter</span>
       <span>LinkedIn</span>
     </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
   </footer>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
 </body>
 
 </html>

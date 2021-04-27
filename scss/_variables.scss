@@ -4,11 +4,11 @@ $mobile: "375px";
 $desktop: "1440px";
 
 // Colors
-$very-light-red-for-cta-hover-bg:hsl(356, 100%, 66%);
-$light-red-for-cta-text:hsl(355, 100%, 74%);
+$light-red-for-cta-text:hsl(356, 100%, 66%);
+$very-light-red-for-cta-hover-bg:hsl(355, 100%, 74%);
 $very-dark-blue-headings:hsl(208, 49%, 24%);
 
-$white-text:  hsl(0, 0%, 100%);
+$white-text: hsl(0, 0%, 100%);
 $grayish-blue-footer-text: hsl(240, 2%, 79%);
 $very-dark-grayish-blue-body-copy: hsl(207, 13%, 34%);
 $very-dark-blue-footer-bg: hsl(240, 10%, 16%);
@@ -22,6 +22,29 @@ $very-dark-gray-blue-body:hsl(237, 17%, 21%);
 $very-dark-desaturated-blue:hsl(237, 23%, 32%);
 
 // Fonts
+$overpass: 'Overpass',
+sans-serif;
+$ubuntu: 'Ubuntu',
+sans-serif;
 
-$overpass: 'Ubuntu', sans-serif;
-$ubuntu: 'Ubuntu', sans-serif; 
+
+// Buttons
+
+%btn-style {
+    border: none;
+    border-radius: 50px;
+    padding: .8rem 1.8rem;
+    font-weight: 600;
+    font-family: $overpass;
+}
+
+%h2-heading {
+    font-family: $overpass;
+    font-weight: 600;
+}
+
+%p-paragraph {
+    font-family: $ubuntu;
+    font-weight: 300;
+    line-height: 1.8rem;
+}

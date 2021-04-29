@@ -4,9 +4,9 @@ $mobile: "375px";
 $desktop: "1440px";
 
 // Colors
-$light-red-for-cta-text:hsl(356, 100%, 66%);
-$very-light-red-for-cta-hover-bg:hsl(355, 100%, 74%);
-$very-dark-blue-headings:hsl(208, 49%, 24%);
+$light-red-for-cta-text: hsl(356, 100%, 66%);
+$very-light-red-for-cta-hover-bg: hsl(355, 100%, 74%);
+$very-dark-blue-headings: hsl(208, 49%, 24%);
 
 $white-text: hsl(0, 0%, 100%);
 $grayish-blue-footer-text: hsl(240, 2%, 79%);
@@ -18,33 +18,47 @@ $very-light-red-bg-grad: hsl(13, 100%, 72%);
 $light-red-bg-grad: hsl(353, 100%, 62%);
 
 // For gradients body
-$very-dark-gray-blue-body:hsl(237, 17%, 21%);
-$very-dark-desaturated-blue:hsl(237, 23%, 32%);
+$very-dark-gray-blue-body: hsl(237, 17%, 21%);
+$very-dark-desaturated-blue: hsl(237, 23%, 32%);
 
 // Fonts
-$overpass: 'Overpass',
-sans-serif;
-$ubuntu: 'Ubuntu',
-sans-serif;
-
+$overpass: "Overpass", sans-serif;
+$ubuntu: "Ubuntu", sans-serif;
 
 // Buttons
-
 %btn-style {
+  border: none;
+  border-radius: 50px;
+  padding: 0.8rem 1.8rem;
+  font-weight: 600;
+  font-family: $overpass;
+}
+
+// Headings
+%h2-heading {
+  font-family: $overpass;
+  font-weight: 600;
+}
+
+//Paragraphs
+%p-paragraph {
+  font-family: $ubuntu;
+  font-weight: 300;
+  line-height: 1.8rem;
+}
+
+// links {
+@mixin anchor {
+  color: $white-text;
+  font-family: $overpass;
+  text-decoration: none;
+  font-weight: 300;
+}
+
+@mixin btn-style {
     border: none;
     border-radius: 50px;
-    padding: .8rem 1.8rem;
+    padding: 0.8rem 1.8rem;
     font-weight: 600;
     font-family: $overpass;
-}
-
-%h2-heading {
-    font-family: $overpass;
-    font-weight: 600;
-}
-
-%p-paragraph {
-    font-family: $ubuntu;
-    font-weight: 300;
-    line-height: 1.8rem;
-}
+  }

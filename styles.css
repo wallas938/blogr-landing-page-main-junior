@@ -79,6 +79,9 @@ img {
 .header__desktop-nav {
   display: none;
 }
+.header__mobile-nav {
+  display: block;
+}
 .header__logo {
   display: inline-block;
   width: 20%;
@@ -88,6 +91,62 @@ img {
   cursor: pointer;
 }
 
+@media screen and (min-width: 1440px) {
+  .header {
+    padding: 5% 15%;
+    display: flex;
+    justify-content: unset;
+  }
+  .header__logo {
+    width: 15%;
+  }
+  .header__mobile-nav {
+    display: none;
+  }
+  .header__desktop-nav {
+    padding-left: 5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .header__desktop-nav .desktop-nav__left {
+    display: flex;
+    align-items: center;
+  }
+  .header__desktop-nav .desktop-nav__left :where(.product a, .company a, .connect a) {
+    color: white;
+    font-family: "Overpass", sans-serif;
+    text-decoration: none;
+    font-weight: 300;
+    position: relative;
+  }
+  .header__desktop-nav .desktop-nav__left :where(.product a, .company a, .connect a)::after {
+    content: url(../../assets/images/icon-arrow-light.svg);
+    position: absolute;
+    margin-left: 10%;
+    cursor: pointer;
+  }
+  .header__desktop-nav .desktop-nav__left div:not(:first-child) {
+    margin-left: 25%;
+  }
+  .header__desktop-nav .desktop-nav__left .product__dropdown,
+.header__desktop-nav .desktop-nav__left .company__dropdown,
+.header__desktop-nav .desktop-nav__left .connect__dropdown {
+    display: none;
+  }
+  .header__desktop-nav .desktop-nav__right button {
+    border: none;
+    border-radius: 50px;
+    padding: 0.8rem 1.8rem;
+    font-weight: 600;
+    font-family: "Overpass", sans-serif;
+    color: #ff525d;
+  }
+  .header__desktop-nav .desktop-nav__right button:first-child {
+    background-color: transparent;
+    color: white;
+  }
+}
 .hero__cta button {
   border: none;
   border-radius: 50px;
@@ -167,6 +226,18 @@ img {
   color: white;
 }
 
+@media screen and (min-width: 1440px) {
+  .hero h1 {
+    font-size: 2.8rem;
+    font-weight: 600;
+  }
+  .hero__cta {
+    justify-content: center;
+  }
+  .hero__cta button {
+    margin: 0 1%;
+  }
+}
 .hero__cta button {
   border: none;
   border-radius: 50px;
@@ -224,9 +295,9 @@ img {
 }
 .illustration h2 {
   color: #1f3f5b;
-}
-.illustration .illustration1 > h2 {
   margin: 2rem 0;
+  font-size: 2.2rem;
+  font-weight: 600;
 }
 .illustration .illustration1 div:not(:first-child) {
   padding: 0 2.5rem 3rem 2.5rem;
@@ -239,22 +310,18 @@ img {
 }
 .illustration .illustration2 {
   position: relative;
-  padding-bottom: 4rem;
-}
-.illustration .illustration2::before {
-  content: "";
-  background-color: #2c2d3f;
+  padding: 10rem 0;
+  margin: 12rem 0 5rem 0;
+  background-color: yellow;
+  border-radius: 0 100px 0 100px;
   background-image: url(../../assets/images/bg-pattern-circles.svg), -webkit-linear-gradient(bottom, #2c2d3f, #3f4164);
   background-repeat: no-repeat;
-  background-position: right top;
+  background-position: center top;
   background-size: contain;
+}
+.illustration .illustration2 > .illustration2__image {
   position: absolute;
-  top: 25%;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-  border-radius: 0 100px 0 100px;
+  top: -27%;
 }
 .illustration .illustration2 div:not(:first-child) {
   padding: 0 2rem 3rem 2rem;
@@ -283,6 +350,64 @@ img {
   color: #4b5862;
 }
 
+@media screen and (min-width: 1440px) {
+  .illustration {
+    overflow: hidden;
+  }
+  .illustration > h2 {
+    font-size: 2.8rem;
+    margin-bottom: 10rem;
+  }
+  .illustration .illustration1 {
+    padding: 0 10rem;
+    margin-bottom: 20%;
+    position: relative;
+  }
+  .illustration .illustration1 .illustration1__image {
+    position: absolute;
+    top: -48%;
+    right: -20%;
+  }
+  .illustration .illustration1 div:not(:first-child) {
+    text-align: left;
+    width: 60%;
+  }
+  .illustration .illustration2 {
+    display: flex;
+    text-align: left;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 10% 0 0;
+    height: 40.9vh;
+    margin-bottom: 20%;
+  }
+  .illustration .illustration2 div:not(:first-child) {
+    width: 45%;
+  }
+  .illustration .illustration2 > .illustration2__image {
+    position: absolute;
+    top: -15%;
+    left: 10%;
+  }
+  .illustration .illustration3 {
+    padding: 0 10rem;
+    margin-bottom: 20%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: flex-end;
+  }
+  .illustration .illustration3 .illustration3__image {
+    position: absolute;
+    top: -28%;
+    left: -278px;
+  }
+  .illustration .illustration3 div:not(:first-child) {
+    width: 60%;
+    padding-left: 10%;
+  }
+}
 .hero__cta button {
   border: none;
   border-radius: 50px;
@@ -358,6 +483,40 @@ img {
 }
 .footer div:not(:first-child) span:not(:first-child) {
   margin: 0.2rem 0;
+}
+
+@media screen and (min-width: 1440px) {
+  .footer {
+    text-align: left;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5% 0;
+    border-radius: 0 100px 0 0;
+    /*     div:last-child {
+          font-size: .4rem;
+          display: unset;
+          position: relative;
+          bottom: -145px;
+          left: 0;
+          color: $light-red-for-cta-text;
+        } */
+  }
+  .footer .logo {
+    width: 7%;
+    margin: unset;
+  }
+  .footer div:not(:first-child) {
+    margin: unset;
+    display: flex;
+    flex-direction: column;
+  }
+  .footer div:not(:first-child) span:first-child {
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+  }
+  .footer div:not(:first-child) span:not(:first-child) {
+    margin: 0.3rem 0;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

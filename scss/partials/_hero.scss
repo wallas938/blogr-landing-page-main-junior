@@ -37,3 +37,20 @@
         }
     }
 }
+
+@media screen and (min-width: $desktop) {
+    .hero {
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 600;
+        }
+
+        &__cta {
+            justify-content: center;
+
+            button {
+                margin: 0 1%;
+            }
+        }
+    }
+}

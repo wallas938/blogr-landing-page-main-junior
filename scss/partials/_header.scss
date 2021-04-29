@@ -3,22 +3,86 @@
 
 /*  Mobile style */
 .header {
-    position: relative;
-    width: 100%;
-    padding: 3rem 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    &__desktop-nav {
-        display: none;
-    }
+  &__desktop-nav {
+    display: none;
+  }
 
+  &__mobile-nav {
+    display: block;
+  }
+
+  position: relative;
+  width: 100%;
+  padding: 3rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+
+  &__logo {
+    display: inline-block;
+    width: 20%;
+  }
+
+  &__mobile-nav {
+    width: 7%;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .header {
+    padding: 5% 15%;
+    display: flex;
+    justify-content: unset;
     &__logo {
-        display: inline-block;
-        width: 20%;
+      width: 15%;
     }
 
     &__mobile-nav {
-        width: 7%;
-        cursor: pointer;
+      display: none;
     }
+
+    &__desktop-nav {
+      padding-left: 5rem;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      .desktop-nav__left {
+        display: flex;
+        align-items: center;
+        :where(.product a, .company a, .connect a) {
+          @include anchor;
+          position: relative;
+          &::after{
+              content: url(../../assets/images/icon-arrow-light.svg);
+              position: absolute;
+              margin-left: 10%;
+              cursor: pointer;
+          }
+        }
+
+        div:not(:first-child) {
+            margin-left: 25%;
+        }
+
+        .product__dropdown,
+        .company__dropdown,
+        .connect__dropdown {
+          display: none;
+        }
+      }
+
+      .desktop-nav__right {
+          button {
+              @include btn-style;
+              color: $light-red-for-cta-text;
+          }
+
+          button:first-child {
+              background-color: transparent;
+              color: $white-text;
+          }
+      }
+    }
+  }
 }

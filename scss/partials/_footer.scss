@@ -2,29 +2,66 @@
 @import "variables";
 
 .footer {
-    background-color: $very-dark-blue-footer-bg;
-    color: $grayish-blue-footer-text;
-    font-family: $overpass;
-    font-weight: 300;
-    text-align: center;
-    padding: 3rem 0;
+  background-color: $very-dark-blue-footer-bg;
+  color: $grayish-blue-footer-text;
+  font-family: $overpass;
+  font-weight: 300;
+  text-align: center;
+  padding: 3rem 0;
+  border-radius: 0 100px 0 0;
+  .logo {
+    width: 20%;
+    margin: 2rem auto;
+  }
+
+  div:not(:first-child) {
+    margin: 3rem 0 2rem 0;
+    display: flex;
+    flex-direction: column;
+    span:first-child {
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    span:not(:first-child) {
+      margin: 0.2rem 0;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .footer {
+    text-align: left;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5% 0;
     border-radius: 0 100px 0 0;
     .logo {
-        width: 20%;
-        margin: 2rem auto;
+      width: 7%;
+      margin: unset;
     }
 
     div:not(:first-child) {
-        margin: 3rem 0 2rem 0;
-        display: flex;
-        flex-direction: column;
-        span:first-child {
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
+      margin: unset;
+      display: flex;
+      flex-direction: column;
+      span:first-child {
+        margin-bottom: 1.5rem;
+        font-weight: 600;
+      }
 
-        span:not(:first-child) {
-            margin: .2rem 0;
-        }
+      span:not(:first-child) {
+        margin: 0.3rem 0;
+      }
     }
+
+/*     div:last-child {
+      font-size: .4rem;
+      display: unset;
+      position: relative;
+      bottom: -145px;
+      left: 0;
+      color: $light-red-for-cta-text;
+    } */
+  }
 }

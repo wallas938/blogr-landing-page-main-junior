@@ -1,11 +1,3 @@
-.hero__cta button {
-  border: none;
-  border-radius: 50px;
-  padding: 0.8rem 1.8rem;
-  font-weight: 600;
-  font-family: "Overpass", sans-serif;
-}
-
 h2 {
   font-family: "Overpass", sans-serif;
   font-weight: 600;
@@ -14,17 +6,10 @@ h2 {
 .hero p, p {
   font-family: "Ubuntu", sans-serif;
   font-weight: 300;
+  font-size: clamp(16px, 5vw, 1.5rem);
   line-height: 1.8rem;
 }
 
-.hero__cta button {
-  border: none;
-  border-radius: 50px;
-  padding: 0.8rem 1.8rem;
-  font-weight: 600;
-  font-family: "Overpass", sans-serif;
-}
-
 h2 {
   font-family: "Overpass", sans-serif;
   font-weight: 600;
@@ -33,6 +18,7 @@ h2 {
 .hero p, p {
   font-family: "Ubuntu", sans-serif;
   font-weight: 300;
+  font-size: clamp(16px, 5vw, 1.5rem);
   line-height: 1.8rem;
 }
 
@@ -72,7 +58,8 @@ img {
 .header {
   position: relative;
   width: 100%;
-  padding: 3rem 1.5rem;
+  /* padding: clamp(30px, 7vw, 90px) 1.5rem clamp(18px, 5vw, 70px) 1.5rem; */
+  padding: clamp(30px, 7vw, 90px) clamp(18px, 5vw, 70px);
   display: flex;
   justify-content: space-between;
 }
@@ -84,21 +71,19 @@ img {
 }
 .header__logo {
   display: inline-block;
-  width: 20%;
+  width: clamp(75px, 20vw, 150px);
 }
 .header__mobile-nav {
-  width: 7%;
+  width: clamp(30px, 7vw, 60px);
   cursor: pointer;
 }
 
 @media screen and (min-width: 1440px) {
   .header {
-    padding: 5% 15%;
+    padding: clamp(70px, 5vw, 95px) clamp(110px, 8vw, 150px);
     display: flex;
     justify-content: unset;
-  }
-  .header__logo {
-    width: 15%;
+    align-items: center;
   }
   .header__mobile-nav {
     display: none;
@@ -118,12 +103,14 @@ img {
     font-family: "Overpass", sans-serif;
     text-decoration: none;
     font-weight: 300;
+    display: flex;
+    align-items: center;
+    font-size: clamp(16px, 1.3vw, 25px);
     position: relative;
   }
   .header__desktop-nav .desktop-nav__left :where(.product a, .company a, .connect a)::after {
     content: url(../../assets/images/icon-arrow-light.svg);
-    position: absolute;
-    margin-left: 10%;
+    margin-left: clamp(11px, .8vw, 19px);
     cursor: pointer;
   }
   .header__desktop-nav .desktop-nav__left div:not(:first-child) {
@@ -137,7 +124,9 @@ img {
   .header__desktop-nav .desktop-nav__right button {
     border: none;
     border-radius: 50px;
-    padding: 0.8rem 1.8rem;
+    /* padding: clamp(23px, 1.6vw, 32px) clamp(45px, 3.3vw, 65px); */
+    padding: clamp(23px, 1.6vw, 32px) clamp(45px, 3.3vw, 65px);
+    font-size: clamp(16px, 1.3vw, 25px);
     font-weight: 600;
     font-family: "Overpass", sans-serif;
     color: #ff525d;
@@ -147,14 +136,6 @@ img {
     color: white;
   }
 }
-.hero__cta button {
-  border: none;
-  border-radius: 50px;
-  padding: 0.8rem 1.8rem;
-  font-weight: 600;
-  font-family: "Overpass", sans-serif;
-}
-
 h2 {
   font-family: "Overpass", sans-serif;
   font-weight: 600;
@@ -163,6 +144,7 @@ h2 {
 .hero p, p {
   font-family: "Ubuntu", sans-serif;
   font-weight: 300;
+  font-size: clamp(16px, 5vw, 1.5rem);
   line-height: 1.8rem;
 }
 
@@ -202,20 +184,31 @@ img {
   position: relative;
   color: white;
   text-align: center;
-  padding: 3rem 2rem;
+  padding: clamp(5rem, 5vw, 80px) clamp(2rem, 3vw, 32px);
+  /* padding: clamp(5rem, 5vw, 80px) clamp(2rem, 3vw, 32px); */
   font-family: "Overpass", sans-serif;
 }
 .hero h1 {
   font-weight: 600;
+  font-size: clamp(24px, 7vw, 84px);
   margin: 0.7rem 0;
 }
 .hero p {
   color: white;
-  margin: 0 0 3rem 0;
+  margin-bottom: 3rem;
 }
 .hero__cta {
   display: flex;
   justify-content: space-evenly;
+}
+.hero__cta button {
+  border: none;
+  border-radius: 50px;
+  /* padding: clamp(23px, 1.6vw, 32px) clamp(45px, 3.3vw, 65px); */
+  padding: clamp(23px, 1.6vw, 32px) clamp(45px, 3.3vw, 65px);
+  font-size: clamp(16px, 1.3vw, 25px);
+  font-weight: 600;
+  font-family: "Overpass", sans-serif;
 }
 .hero__cta button:nth-child(1) {
   color: #ff525d;
@@ -228,8 +221,10 @@ img {
 
 @media screen and (min-width: 1440px) {
   .hero h1 {
-    font-size: 2.8rem;
     font-weight: 600;
+  }
+  .hero p {
+    margin: clamp(28px, 2vw, 48px) 0 clamp(72px, 5vw, 120px) 0;
   }
   .hero__cta {
     justify-content: center;
@@ -238,14 +233,6 @@ img {
     margin: 0 1%;
   }
 }
-.hero__cta button {
-  border: none;
-  border-radius: 50px;
-  padding: 0.8rem 1.8rem;
-  font-weight: 600;
-  font-family: "Overpass", sans-serif;
-}
-
 h2 {
   font-family: "Overpass", sans-serif;
   font-weight: 600;
@@ -254,6 +241,7 @@ h2 {
 p, .hero p {
   font-family: "Ubuntu", sans-serif;
   font-weight: 300;
+  font-size: clamp(16px, 5vw, 1.5rem);
   line-height: 1.8rem;
 }
 
@@ -408,14 +396,6 @@ img {
     padding-left: 10%;
   }
 }
-.hero__cta button {
-  border: none;
-  border-radius: 50px;
-  padding: 0.8rem 1.8rem;
-  font-weight: 600;
-  font-family: "Overpass", sans-serif;
-}
-
 h2 {
   font-family: "Overpass", sans-serif;
   font-weight: 600;
@@ -424,6 +404,7 @@ h2 {
 p, .hero p {
   font-family: "Ubuntu", sans-serif;
   font-weight: 300;
+  font-size: clamp(16px, 5vw, 1.5rem);
   line-height: 1.8rem;
 }
 

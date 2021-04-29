@@ -5,25 +5,27 @@
     position: relative;
     color: $white-text;
     text-align: center;
-    padding: 3rem 2rem;
+    padding: clamp(5rem, 5vw, 80px) clamp(2rem, 3vw, 32px);
+    /* padding: clamp(5rem, 5vw, 80px) clamp(2rem, 3vw, 32px); */
     font-family: $overpass;
 
     h1 {
         font-weight: 600;
+        font-size: clamp(24px, 7vw, 84px);
         margin: .7rem 0;
     }
 
     p {
         @extend %p-paragraph;
         color: $white-text;
-        margin: 0  0 3rem 0;
+        margin-bottom: 3rem;
     }
 
     &__cta  {
         display: flex;
         justify-content: space-evenly;
         button {
-            @extend %btn-style;
+            @include btn-style;
 
             &:nth-child(1) {
                 color: $light-red-for-cta-text;
@@ -41,8 +43,11 @@
 @media screen and (min-width: $desktop) {
     .hero {
         h1 {
-            font-size: 2.8rem;
             font-weight: 600;
+        }
+
+        p {
+            margin: clamp(28px, 2vw, 48px) 0 clamp(72px, 5vw, 120px) 0;
         }
 
         &__cta {

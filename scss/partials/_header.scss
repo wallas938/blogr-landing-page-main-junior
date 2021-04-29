@@ -13,29 +13,28 @@
 
   position: relative;
   width: 100%;
-  padding: 3rem 1.5rem;
+  /* padding: clamp(30px, 7vw, 90px) 1.5rem clamp(18px, 5vw, 70px) 1.5rem; */
+  padding: clamp(30px, 7vw, 90px) clamp(18px, 5vw, 70px);
   display: flex;
   justify-content: space-between;
 
   &__logo {
     display: inline-block;
-    width: 20%;
+    width: clamp(75px, 20vw, 150px);
   }
 
   &__mobile-nav {
-    width: 7%;
+    width: clamp(30px, 7vw, 60px);
     cursor: pointer;
   }
 }
 
 @media screen and (min-width: $desktop) {
   .header {
-    padding: 5% 15%;
+    padding: clamp(70px, 5vw, 95px) clamp(110px, 8vw, 150px);
     display: flex;
     justify-content: unset;
-    &__logo {
-      width: 15%;
-    }
+    align-items: center;
 
     &__mobile-nav {
       display: none;
@@ -46,23 +45,24 @@
       width: 100%;
       display: flex;
       justify-content: space-between;
-
       .desktop-nav__left {
         display: flex;
         align-items: center;
         :where(.product a, .company a, .connect a) {
           @include anchor;
+          display: flex;
+          align-items: center;
+          font-size: clamp(16px, 1.3vw, 25px);
           position: relative;
-          &::after{
-              content: url(../../assets/images/icon-arrow-light.svg);
-              position: absolute;
-              margin-left: 10%;
-              cursor: pointer;
+          &::after {
+            content: url(../../assets/images/icon-arrow-light.svg);
+            margin-left: clamp(11px, .8vw, 19px);
+            cursor: pointer;
           }
         }
 
         div:not(:first-child) {
-            margin-left: 25%;
+          margin-left: 25%;
         }
 
         .product__dropdown,
@@ -73,15 +73,15 @@
       }
 
       .desktop-nav__right {
-          button {
-              @include btn-style;
-              color: $light-red-for-cta-text;
-          }
+        button {
+          @include btn-style;
+          color: $light-red-for-cta-text;
+        }
 
-          button:first-child {
-              background-color: transparent;
-              color: $white-text;
-          }
+        button:first-child {
+          background-color: transparent;
+          color: $white-text;
+        }
       }
     }
   }

@@ -44,6 +44,7 @@ $ubuntu: "Ubuntu", sans-serif;
 %p-paragraph {
   font-family: $ubuntu;
   font-weight: 300;
+  font-size: clamp(16px, 5vw, 1.5rem);
   line-height: 1.8rem;
 }
 
@@ -56,9 +57,11 @@ $ubuntu: "Ubuntu", sans-serif;
 }
 
 @mixin btn-style {
-    border: none;
-    border-radius: 50px;
-    padding: 0.8rem 1.8rem;
-    font-weight: 600;
-    font-family: $overpass;
-  }
+  border: none;
+  border-radius: 50px;
+  /* padding: clamp(23px, 1.6vw, 32px) clamp(45px, 3.3vw, 65px); */
+  padding: clamp(23px, 1.6vw, 32px) clamp(45px, 3.3vw, 65px);
+  font-size: clamp(16px, 1.3vw, 25px);
+  font-weight: 600;
+  font-family: $overpass;
+}

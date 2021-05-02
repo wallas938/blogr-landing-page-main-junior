@@ -11,12 +11,12 @@
 
     h1 {
         font-weight: 600;
-        font-size: clamp(24px, 7vw, 84px);
+        font-size: clamp(24px, 7vw, 108px);
         margin: .7rem 0;
     }
 
     p {
-        @extend %p-paragraph;
+        @include text;
         color: $white-text;
         margin-bottom: 3rem;
     }

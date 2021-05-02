@@ -8,6 +8,7 @@
   font-weight: 300;
   text-align: center;
   padding: 3rem 0;
+  /* padding: clamp(48px, 13vw, 50px) 0; */
   border-radius: 0 100px 0 0;
   .logo {
     width: 20%;
@@ -18,6 +19,11 @@
     margin: 3rem 0 2rem 0;
     display: flex;
     flex-direction: column;
+
+    span {
+      font-size: clamp(18px, 2.5vw, 35px);
+    }
+
     span:first-child {
       margin-bottom: 1rem;
       font-weight: 600;
@@ -54,14 +60,5 @@
         margin: 0.3rem 0;
       }
     }
-
-/*     div:last-child {
-      font-size: .4rem;
-      display: unset;
-      position: relative;
-      bottom: -145px;
-      left: 0;
-      color: $light-red-for-cta-text;
-    } */
   }
 }

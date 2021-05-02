@@ -17,19 +17,23 @@ img {
 }
 
 .intro {
-    background: linear-gradient(90deg, $very-light-red-bg-grad, $light-red-bg-grad);
-    position: relative;
-    z-index: -10;
-    overflow: hidden;
-    padding-bottom: 5rem;
-    border-radius: 0 0 0 80px;
-    > img {
-        position: absolute;
-        top: 40%;
-        left: 35%;
-        transform: scale(4);
-        z-index: -1;
-    }
+  background: linear-gradient(
+    90deg,
+    $very-light-red-bg-grad,
+    $light-red-bg-grad
+  );
+  position: relative;
+  z-index: -10;
+  overflow: hidden;
+  padding-bottom: 5rem;
+  border-radius: 0 0 0 80px;
+  > img {
+    position: absolute;
+    top: 40%;
+    left: 35%;
+    transform: scale(4);
+    z-index: -1;
+  }
 }
 
 h2 {
@@ -37,5 +41,5 @@ h2 {
 }
 
 p {
-  @extend %p-paragraph;
+  @include text;
 }

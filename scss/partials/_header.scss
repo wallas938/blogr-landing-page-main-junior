@@ -34,7 +34,6 @@
     padding: clamp(70px, 5vw, 95px) clamp(110px, 8vw, 150px);
     display: flex;
     justify-content: unset;
-    align-items: center;
 
     &__mobile-nav {
       display: none;
@@ -45,30 +44,68 @@
       width: 100%;
       display: flex;
       justify-content: space-between;
+
       .desktop-nav__left {
         display: flex;
-        align-items: center;
-        :where(.product a, .company a, .connect a) {
-          @include anchor;
-          display: flex;
-          align-items: center;
-          font-size: clamp(16px, 1.3vw, 25px);
+        align-items: baseline;
+
+        .product,
+        .company,
+        .connect {
+          width: 30%;
           position: relative;
-          &::after {
-            content: url(../../assets/images/icon-arrow-light.svg);
-            margin-left: clamp(11px, .8vw, 19px);
-            cursor: pointer;
-          }
         }
 
-        div:not(:first-child) {
-          margin-left: 25%;
+        :where(.product > a, .company > a, .connect > a) {
+          @include anchor;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: baseline;
+          font-size: clamp(16px, 1.3vw, 25px);
+          position: relative;
+          margin-right: 2.5vw;
+          cursor: pointer;
+          &::after {
+            content: url(../../assets/images/icon-arrow-light.svg);
+            margin-left: clamp(11px, 0.8vw, 19px);
+          }
+          &:hover {
+            text-decoration: underline;
+          }
         }
 
         .product__dropdown,
         .company__dropdown,
         .connect__dropdown {
-          display: none;
+          display: flex;
+          flex-direction: column;
+          padding: 1.5vw 5vw 1.5vw 1vw;
+          background-color: #fff;
+          border-radius: 5px;
+          font-family: $ubuntu;
+          position: relative;
+          transition: all 500ms ease-in-out;
+          opacity: 0;
+          pointer-events: none;
+          & > a:not(:last-child) {
+            margin-bottom: .5rem;
+
+            &:hover {
+              font-weight: bold;
+            }
+          }
+        }
+
+        .show-dropdown {
+          opacity: 1;
+          top: clamp(28.8px, 2vw, 36.2px);
+          pointer-events: all;
+        }
+
+        .hide-dropdown {
+          opacity: 0;
+          top: clamp(2.8px, .2vw, 3.6px);
+          pointer-events: none;
         }
       }
 
@@ -76,6 +113,10 @@
         button {
           @include btn-style;
           color: $light-red-for-cta-text;
+          &:hover:last-child {
+            background-color: rgba($color: lightgray, $alpha: 0.2);
+            color: $white-text;
+          }
         }
 
         button:first-child {

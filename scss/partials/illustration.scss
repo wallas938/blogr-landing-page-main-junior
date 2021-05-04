@@ -151,7 +151,7 @@
     }
 
     .illustration3 {
-      padding: 0 10rem;
+      padding-right: clamp(72px, 8vw, 195.2px);
       margin-bottom: 20%;
       position: relative;
       display: flex;
@@ -160,7 +160,7 @@
       align-items: flex-end;
       .illustration3__image {
         position: absolute;
-        top: -28%;
+        top: -25%;
         left: -278px;
       }
 

@@ -47,6 +47,13 @@ p {
   line-height: clamp(43px, 3vw, 63px);
 }
 
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: inherit;
+}
+
 /*  Mobile style */
 .header {
   position: relative;
@@ -76,7 +83,6 @@ p {
     padding: clamp(70px, 5vw, 95px) clamp(110px, 8vw, 150px);
     display: flex;
     justify-content: unset;
-    align-items: center;
   }
   .header__mobile-nav {
     display: none;
@@ -89,40 +95,81 @@ p {
   }
   .header__desktop-nav .desktop-nav__left {
     display: flex;
-    align-items: center;
+    align-items: baseline;
   }
-  .header__desktop-nav .desktop-nav__left :where(.product a, .company a, .connect a) {
+  .header__desktop-nav .desktop-nav__left .product,
+.header__desktop-nav .desktop-nav__left .company,
+.header__desktop-nav .desktop-nav__left .connect {
+    width: 30%;
+    position: relative;
+  }
+  .header__desktop-nav .desktop-nav__left :where(.product > a, .company > a, .connect > a) {
     color: white;
     font-family: "Overpass", sans-serif;
     text-decoration: none;
     font-weight: 300;
     display: flex;
-    align-items: center;
+    justify-content: space-evenly;
+    align-items: baseline;
     font-size: clamp(16px, 1.3vw, 25px);
     position: relative;
-  }
-  .header__desktop-nav .desktop-nav__left :where(.product a, .company a, .connect a)::after {
-    content: url(../../assets/images/icon-arrow-light.svg);
-    margin-left: clamp(11px, .8vw, 19px);
+    margin-right: 2.5vw;
     cursor: pointer;
   }
-  .header__desktop-nav .desktop-nav__left div:not(:first-child) {
-    margin-left: 25%;
+  .header__desktop-nav .desktop-nav__left :where(.product > a, .company > a, .connect > a)::after {
+    content: url(../../assets/images/icon-arrow-light.svg);
+    margin-left: clamp(11px, 0.8vw, 19px);
+  }
+  .header__desktop-nav .desktop-nav__left :where(.product > a, .company > a, .connect > a):hover {
+    text-decoration: underline;
   }
   .header__desktop-nav .desktop-nav__left .product__dropdown,
 .header__desktop-nav .desktop-nav__left .company__dropdown,
 .header__desktop-nav .desktop-nav__left .connect__dropdown {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5vw 5vw 1.5vw 1vw;
+    background-color: #fff;
+    border-radius: 5px;
+    font-family: "Ubuntu", sans-serif;
+    position: relative;
+    transition: all 500ms ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .header__desktop-nav .desktop-nav__left .product__dropdown > a:not(:last-child),
+.header__desktop-nav .desktop-nav__left .company__dropdown > a:not(:last-child),
+.header__desktop-nav .desktop-nav__left .connect__dropdown > a:not(:last-child) {
+    margin-bottom: 0.5rem;
+  }
+  .header__desktop-nav .desktop-nav__left .product__dropdown > a:not(:last-child):hover,
+.header__desktop-nav .desktop-nav__left .company__dropdown > a:not(:last-child):hover,
+.header__desktop-nav .desktop-nav__left .connect__dropdown > a:not(:last-child):hover {
+    font-weight: bold;
+  }
+  .header__desktop-nav .desktop-nav__left .show-dropdown {
+    opacity: 1;
+    top: clamp(28.8px, 2vw, 36.2px);
+    pointer-events: all;
+  }
+  .header__desktop-nav .desktop-nav__left .hide-dropdown {
+    opacity: 0;
+    top: clamp(2.8px, .2vw, 3.6px);
+    pointer-events: none;
   }
   .header__desktop-nav .desktop-nav__right button {
     border: none;
     border-radius: 50px;
-    /* padding: clamp(23px, 1.6vw, 32px) clamp(45px, 3.3vw, 65px); */
     padding: clamp(22px, 1.6vw, 30px) clamp(45px, 3.3vw, 50px);
     font-size: clamp(18px, 1.3vw, 25px);
     font-weight: 600;
     font-family: "Overpass", sans-serif;
+    cursor: pointer;
     color: #ff525d;
+  }
+  .header__desktop-nav .desktop-nav__right button:hover:last-child {
+    background-color: rgba(211, 211, 211, 0.2);
+    color: white;
   }
   .header__desktop-nav .desktop-nav__right button:first-child {
     background-color: transparent;
@@ -173,6 +220,13 @@ p {
   line-height: clamp(43px, 3vw, 63px);
 }
 
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: inherit;
+}
+
 .hero {
   position: relative;
   color: white;
@@ -201,19 +255,27 @@ p {
 .hero__cta button {
   border: none;
   border-radius: 50px;
-  /* padding: clamp(23px, 1.6vw, 32px) clamp(45px, 3.3vw, 65px); */
   padding: clamp(22px, 1.6vw, 30px) clamp(45px, 3.3vw, 50px);
   font-size: clamp(18px, 1.3vw, 25px);
   font-weight: 600;
   font-family: "Overpass", sans-serif;
+  cursor: pointer;
 }
 .hero__cta button:nth-child(1) {
   color: #ff525d;
+}
+.hero__cta button:nth-child(1):hover:first-child {
+  background-color: rgba(211, 211, 211, 0.2);
+  color: white;
 }
 .hero__cta button:nth-child(2) {
   background-color: transparent;
   border: 1px solid white;
   color: white;
+}
+.hero__cta button:nth-child(2):hover:last-child {
+  background-color: white;
+  color: #ff525d;
 }
 
 @media screen and (min-width: 1440px) {
@@ -272,6 +334,13 @@ p {
   font-family: "Ubuntu", sans-serif;
   font-size: clamp(20px, 1.4vw, 34px);
   line-height: clamp(43px, 3vw, 63px);
+}
+
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: inherit;
 }
 
 .illustration {
@@ -397,7 +466,7 @@ p {
     width: clamp(705px, 37vw, 902px);
   }
   .illustration .illustration3 {
-    padding: 0 10rem;
+    padding-right: clamp(72px, 8vw, 195.2px);
     margin-bottom: 20%;
     position: relative;
     display: flex;
@@ -407,7 +476,7 @@ p {
   }
   .illustration .illustration3 .illustration3__image {
     position: absolute;
-    top: -28%;
+    top: -25%;
     left: -278px;
   }
   .illustration .illustration3 div:not(:first-child) {
@@ -457,6 +526,13 @@ p {
   font-family: "Ubuntu", sans-serif;
   font-size: clamp(20px, 1.4vw, 34px);
   line-height: clamp(43px, 3vw, 63px);
+}
+
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: inherit;
 }
 
 .footer {

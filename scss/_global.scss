@@ -43,3 +43,10 @@ h2 {
 p {
   @include text;
 }
+
+a {
+  text-decoration: none;
+  &:visited {
+    color: inherit;
+  }
+}

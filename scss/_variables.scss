@@ -54,6 +54,10 @@ $ubuntu: "Ubuntu", sans-serif;
   font-family: $overpass;
   text-decoration: none;
   font-weight: 300;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 @mixin btn-style {

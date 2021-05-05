@@ -92,6 +92,7 @@ a:visited {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
   }
   .header__desktop-nav .desktop-nav__left {
     display: flex;
@@ -116,36 +117,44 @@ a:visited {
     margin-right: 2.5vw;
     cursor: pointer;
   }
+  .header__desktop-nav .desktop-nav__left :where(.product > a, .company > a, .connect > a):hover {
+    text-decoration: underline;
+  }
   .header__desktop-nav .desktop-nav__left :where(.product > a, .company > a, .connect > a)::after {
     content: url(../../assets/images/icon-arrow-light.svg);
     margin-left: clamp(11px, 0.8vw, 19px);
   }
-  .header__desktop-nav .desktop-nav__left :where(.product > a, .company > a, .connect > a):hover {
-    text-decoration: underline;
+  .header__desktop-nav .desktop-nav__left :where(.product > a, .company > a, .connect > a):hover::after {
+    transform: scaleY(-1);
   }
   .header__desktop-nav .desktop-nav__left .product__dropdown,
 .header__desktop-nav .desktop-nav__left .company__dropdown,
 .header__desktop-nav .desktop-nav__left .connect__dropdown {
     display: flex;
     flex-direction: column;
-    padding: 1.5vw 5vw 1.5vw 1vw;
     background-color: #fff;
     border-radius: 5px;
     font-family: "Ubuntu", sans-serif;
     position: relative;
-    transition: all 500ms ease-in-out;
+    transition: all 300ms ease-in-out;
     opacity: 0;
     pointer-events: none;
+    width: clamp(144px, 10vw, 239.733px);
+    height: clamp(180.883px, 9vw, 219.6px);
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 1vw;
   }
   .header__desktop-nav .desktop-nav__left .product__dropdown > a:not(:last-child),
 .header__desktop-nav .desktop-nav__left .company__dropdown > a:not(:last-child),
 .header__desktop-nav .desktop-nav__left .connect__dropdown > a:not(:last-child) {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
   }
-  .header__desktop-nav .desktop-nav__left .product__dropdown > a:not(:last-child):hover,
-.header__desktop-nav .desktop-nav__left .company__dropdown > a:not(:last-child):hover,
-.header__desktop-nav .desktop-nav__left .connect__dropdown > a:not(:last-child):hover {
+  .header__desktop-nav .desktop-nav__left .product__dropdown > a:hover,
+.header__desktop-nav .desktop-nav__left .company__dropdown > a:hover,
+.header__desktop-nav .desktop-nav__left .connect__dropdown > a:hover {
     font-weight: bold;
+    cursor: pointer;
   }
   .header__desktop-nav .desktop-nav__left .show-dropdown {
     opacity: 1;
@@ -588,6 +597,10 @@ a:visited {
   }
   .footer div:not(:first-child) span:not(:first-child) {
     margin: 0.3rem 0;
+    cursor: pointer;
+  }
+  .footer div:not(:first-child) span:not(:first-child):hover {
+    text-decoration: underline;
   }
 }
 

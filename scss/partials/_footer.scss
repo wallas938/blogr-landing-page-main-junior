@@ -58,6 +58,10 @@
 
       span:not(:first-child) {
         margin: 0.3rem 0;
+        cursor: pointer;
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }

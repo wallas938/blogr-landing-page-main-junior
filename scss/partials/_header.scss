@@ -28,7 +28,6 @@
       text-align: center;
       display: flex;
       flex-direction: column;
-      justify-content: space-evenly;
       top: 15vw;
       left: 50%;
       transform: translateX(-50%);
@@ -37,10 +36,30 @@
       background-color: $white-text;
       border-radius: 5px;
       z-index: 1000;
+      padding: 2rem;
 
-      > div {
+      > div.hamburger-menu__dropdown-container {
+        padding-bottom: 2.5rem;
+        > a {
+          color: $very-dark-blue-headings;
+          font-family: $overpass;
+          font-weight: 300;
+          font-size: clamp(28.8px, 6.8vw, 70px);
+        }
 
-        .dropdown {
+        > a::after {
+          content: url(../../assets/images/icon-arrow-dark.svg);
+          margin-left: 2vw;
+        }
+
+        > a:hover {
+          &::after {
+            transform: scaleY(-1);
+            -moz-transform: scaleY(-1);
+          }
+        }
+
+        .hamburger-menu__dropdown {
           display: flex;
           flex-direction: column;
           display: none;
@@ -70,9 +89,11 @@
       display: flex;
       justify-content: space-between;
       align-items: baseline;
+
       .desktop-nav__left {
         display: flex;
         align-items: baseline;
+
         .product,
         .company,
         .connect {
@@ -120,11 +141,11 @@
           align-items: flex-start;
           padding-left: 1vw;
 
-          & > a:not(:last-child) {
+          &>a:not(:last-child) {
             margin-bottom: 1.5rem;
           }
 
-          & > a:hover {
+          &>a:hover {
             font-weight: bold;
             cursor: pointer;
           }

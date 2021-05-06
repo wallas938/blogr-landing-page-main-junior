@@ -30,11 +30,11 @@
   <div class="intro">
     <img src="assets/images/bg-pattern-intro.svg" alt="">
     <header class="header">
-      <a href="/" class="header__logo">
-        <img src="assets/images/logo.svg" alt="blogr" srcset="">
-      </a>
       <nav class="header__desktop-nav">
         <div class="desktop-nav__left">
+          <a href="/" class="header__logo">
+            <img src="assets/images/logo.svg" alt="blogr" srcset="">
+          </a>
           <div class="product dropdown-container">
             <a>Product</a>
             <div class="product__dropdown dropdown">
@@ -68,7 +68,40 @@
         </div>
       </nav>
       <nav class="header__mobile-nav">
-        <img src="assets/images/icon-hamburger.svg" alt="icon-hamburger" srcset="">
+        <a href="/" class="header__logo">
+          <img src="assets/images/logo.svg" alt="blogr" srcset="">
+        </a>
+        <!-- <img src="assets/images/icon-hamburger.svg" alt="icon-hamburger" srcset=""> -->
+        <div class="hamburger-icon">
+        </div>
+        <div class="hamburger-menu">
+          <div class="product dropdown-container">
+            <a>Product</a>
+            <div class="product__dropdown dropdown">
+              <a class="link">Overview</a>
+              <a class="link">Pricing</a>
+              <a class="link">Marketplace</a>
+              <a class="link">Integrations</a>
+            </div>
+          </div>
+          <div class="company dropdown-container">
+            <a>Company</a>
+            <div class="company__dropdown dropdown">
+              <a class="link">About</a>
+              <a class="link">Team</a>
+              <a class="link">Blog</a>
+              <a class="link">Careers</a>
+            </div>
+          </div>
+          <div class="connect dropdown-container">
+            <a>Connect</a>
+            <div class="connect__dropdown dropdown">
+              <a class="link">Contact</a>
+              <a class="link">Newsletter</a>
+              <a class="link">LinkedIn</a>
+            </div>
+          </div>
+        </div>
       </nav>
     </header>
     <section class="hero">
@@ -85,7 +118,7 @@
     <div class="illustration1">
       <div class="illustration1__image">
         <img src="assets/images/illustration-editor-mobile.svg" class="mobile" alt="">
-        <img src="assets/images/illustration-editor-desktop.svg" class="desktop"alt="">
+        <img src="assets/images/illustration-editor-desktop.svg" class="desktop" alt="">
       </div>
       <div>
         <h2>Introducing an extensible editor</h2>

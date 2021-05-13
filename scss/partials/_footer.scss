@@ -2,6 +2,8 @@
 @import "variables";
 
 .footer {
+  position: relative;
+  z-index: -10;
   background-color: $very-dark-blue-footer-bg;
   color: $grayish-blue-footer-text;
   font-family: $overpass;
@@ -10,6 +12,7 @@
   padding: 3rem 0;
   /* padding: clamp(48px, 13vw, 50px) 0; */
   border-radius: 0 100px 0 0;
+
   .logo {
     width: 20%;
     margin: 2rem auto;
@@ -42,6 +45,7 @@
     justify-content: space-evenly;
     padding: 5% 0;
     border-radius: 0 100px 0 0;
+
     .logo {
       width: 7%;
       margin: unset;
@@ -51,6 +55,7 @@
       margin: unset;
       display: flex;
       flex-direction: column;
+
       span:first-child {
         margin-bottom: 1.5rem;
         font-weight: 600;
@@ -59,6 +64,7 @@
       span:not(:first-child) {
         margin: 0.3rem 0;
         cursor: pointer;
+
         &:hover {
           text-decoration: underline;
         }

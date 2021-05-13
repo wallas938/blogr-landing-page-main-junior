@@ -27,7 +27,7 @@ img {
 .intro {
   background: linear-gradient(90deg, #ff8f70, #ff3d54);
   position: relative;
-  z-index: -10;
+  z-index: -1;
   overflow: hidden;
   padding-bottom: 5rem;
   border-radius: 0 0 0 80px;
@@ -83,7 +83,7 @@ img {
 .intro {
   background: linear-gradient(90deg, #ff8f70, #ff3d54);
   position: relative;
-  z-index: -10;
+  z-index: -1;
   overflow: hidden;
   padding-bottom: 5rem;
   border-radius: 0 0 0 80px;
@@ -163,11 +163,11 @@ a:visited {
   height: 5vw;
 }
 .header__mobile-nav .hamburger-menu {
-  position: absolute;
+  position: fixed;
   text-align: center;
   flex-direction: column;
   overflow: hidden;
-  top: 15vw;
+  top: 25vw;
   left: 50%;
   transform: translateX(-50%);
   width: 95%;
@@ -360,7 +360,7 @@ img {
 .intro {
   background: linear-gradient(90deg, #ff8f70, #ff3d54);
   position: relative;
-  z-index: -10;
+  z-index: -1;
   overflow: hidden;
   padding-bottom: 5rem;
   border-radius: 0 0 0 80px;
@@ -476,7 +476,7 @@ img {
 .intro {
   background: linear-gradient(90deg, #ff8f70, #ff3d54);
   position: relative;
-  z-index: -10;
+  z-index: -1;
   overflow: hidden;
   padding-bottom: 5rem;
   border-radius: 0 0 0 80px;
@@ -504,6 +504,8 @@ a:visited {
 }
 
 .illustration {
+  position: relative;
+  z-index: -10;
   text-align: center;
   padding: 5rem 0;
 }
@@ -668,7 +670,7 @@ img {
 .intro {
   background: linear-gradient(90deg, #ff8f70, #ff3d54);
   position: relative;
-  z-index: -10;
+  z-index: -1;
   overflow: hidden;
   padding-bottom: 5rem;
   border-radius: 0 0 0 80px;
@@ -696,6 +698,8 @@ a:visited {
 }
 
 .footer {
+  position: relative;
+  z-index: -10;
   background-color: #25252d;
   color: #c8c8cb;
   font-family: "Overpass", sans-serif;

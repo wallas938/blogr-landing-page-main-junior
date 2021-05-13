@@ -39,11 +39,11 @@
     }
 
     .hamburger-menu {
-      position: absolute;
+      position: fixed;
       text-align: center;
       flex-direction: column;
       overflow: hidden;
-      top: 15vw;
+      top: 25vw;
       left: 50%;
       transform: translateX(-50%);
       width: 95%;

@@ -7,10 +7,10 @@
   <!-- displays site properly based on user's device -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,300;0,900;1,600&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;600&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="styles.css">
-  <script src="js/script.js" defer></script>
+  <script src="js/desktop-script.js" defer></script>
+  <script src="js/mobile-script.js" defer></script>
   <title>Frontend Mentor | [Blogr]</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -71,13 +71,12 @@
         <a href="/" class="header__logo">
           <img src="assets/images/logo.svg" alt="blogr" srcset="">
         </a>
-        <!-- <img src="assets/images/icon-hamburger.svg" alt="icon-hamburger" srcset=""> -->
-        <div class="hamburger-icon">
+        <div class="menuButton hamburger-icon">
         </div>
-        <div class="hamburger-menu">
+        <div class="hamburger-menu hide-menu">
           <div class="hamburger-menu__product hamburger-menu__dropdown-container">
             <a>Product</a>
-            <div class="hamburger-menu__product__dropdown hamburger-menu__dropdown">
+            <div class="hamburger-menu__product__dropdown hamburger-menu__dropdown hide-accordion">
               <a>Overview</a>
               <a>Pricing</a>
               <a>Marketplace</a>
@@ -86,7 +85,7 @@
           </div>
           <div class="hamburger-menu__company hamburger-menu__dropdown-container">
             <a>Company</a>
-            <div class="hamburger-menu__company__dropdown hamburger-menu__dropdown">
+            <div class="hamburger-menu__company__dropdown hamburger-menu__dropdown hide-accordion">
               <a class="link">About</a>
               <a class="link">Team</a>
               <a class="link">Blog</a>
@@ -95,11 +94,16 @@
           </div>
           <div class="hamburger-menu__connect hamburger-menu__dropdown-container">
             <a>Connect</a>
-            <div class="hamburger-menu__connect__dropdown hamburger-menu__dropdown">
+            <div class="hamburger-menu__connect__dropdown hamburger-menu__dropdown hide-accordion">
               <a class="link">Contact</a>
               <a class="link">Newsletter</a>
               <a class="link">LinkedIn</a>
             </div>
+          </div>
+          <hr>
+          <div class="hamburger-menu__cta">
+            <button>Login</button>
+            <button>Sign Up</button>
           </div>
         </div>
       </nav>

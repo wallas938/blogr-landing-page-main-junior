@@ -27,13 +27,13 @@
     }
 
     .hamburger-icon {
-      background-image: url(../../assets/images/icon-hamburger.svg);
+      background-image: url("../../assets/images/icon-hamburger.svg");
       width: 7vw;
       height: 5vw;
     }
 
     .close-icon {
-      background-image: url(../../assets/images/icon-close.svg);
+      background-image: url("../../assets/images/icon-close.svg");
       width: 7vw;
       height: 5vw;
     }
@@ -46,16 +46,15 @@
       top: 25vw;
       left: 50%;
       transform: translateX(-50%);
-      width: 95%;
-      min-height: 140vw;
+      width: 85vw;
       background-color: $white-text;
       border-radius: 5px;
       z-index: 1000;
       padding: 2rem;
 
-      > div.hamburger-menu__dropdown-container {
+      >div.hamburger-menu__dropdown-container {
         overflow: hidden;
-        padding-bottom: 2.5rem;
+        padding-bottom: 1.5rem;
 
         a {
           color: $very-dark-blue-headings;
@@ -63,32 +62,40 @@
           font-weight: 600;
         }
 
-        > a {
-          font-size: clamp(22.5px, 6vw, 70px);
+        >a {
+          font-size: clamp(18.95px, 5vw, 32px);
         }
 
-        > a::after {
-          content: url(../../assets/images/icon-arrow-dark.svg);
+        >a::after {
+          content: url("../../assets/images/icon-arrow-dark.svg");
           margin-left: 2vw;
+          transition: transform 250ms ease-in-out;
+          display: inline-block;
         }
 
         .hamburger-menu__dropdown {
           z-index: -1;
           width: 100%;
-          height: 30vh;
+          height: 25vh;
           border-radius: 5px;
           flex-direction: column;
           justify-content: space-evenly;
           margin: clamp(11.25px, 3vw, 40px) 0;
           background-color: #efeff1;
           transition: right 550ms ease-in-out;
-          > a {
-            font-size: clamp(20.6333px, 5.5vw, 60px);
+
+          >a {
+            font-size: clamp(17.05px, 4.5vw, 26px);
           }
         }
       }
 
       .hamburger-menu__cta {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2% 0;
+
         button:first-child {
           color: $very-dark-blue-headings;
           background: $white-text;
@@ -100,12 +107,11 @@
 
         button {
           @include btn-style;
-          background: linear-gradient(
-            to right,
-            $very-light-red-bg-grad,
-            $light-red-bg-grad
-          );
+          background: linear-gradient(to right,
+              $very-light-red-bg-grad,
+              $light-red-bg-grad);
           border: none;
+          width: 60%;
         }
       }
     }
@@ -118,7 +124,7 @@
 
 @media screen and (min-width: $desktop) {
   .header {
-    padding: clamp(70px, 5vw, 95px) clamp(110px, 8vw, 150px);
+    padding: clamp(96.4px, 6vw, 146.4px) clamp(110px, 8vw, 150px);
     display: flex;
     justify-content: unset;
 
@@ -136,6 +142,14 @@
       .desktop-nav__left {
         display: flex;
         align-items: baseline;
+        margin-left: 5vw;
+
+        .header__logo {
+          position: absolute;
+          left: 6vw;
+          top: 7vw;
+          width: 7%;
+        }
 
         .product,
         .company,
@@ -151,59 +165,36 @@
           align-items: baseline;
           font-size: clamp(16px, 1.3vw, 25px);
           position: relative;
-          margin-right: 2.5vw;
+          margin-right: 4.5vw;
           cursor: pointer;
 
           &::after {
-            content: url(../../assets/images/icon-arrow-light.svg);
+            content: url("../../assets/images/icon-arrow-light.svg");
             margin-left: clamp(11px, 0.8vw, 19px);
-          }
-
-          &:hover {
-            &::after {
-              transform: scaleY(-1);
-            }
           }
         }
 
-        .product__dropdown,
-        .company__dropdown,
-        .connect__dropdown {
-          display: flex;
+        .dropdown {
+          position: absolute;
           flex-direction: column;
           background-color: #fff;
           border-radius: 5px;
           font-family: "Ubuntu", sans-serif;
-          position: relative;
           transition: all 300ms ease-in-out;
-          opacity: 0;
-          pointer-events: none;
           width: clamp(144px, 10vw, 239.733px);
-          height: clamp(180.883px, 9vw, 219.6px);
           justify-content: center;
           align-items: flex-start;
-          padding-left: 1vw;
-
-          & > a:not(:last-child) {
-            margin-bottom: 1.5rem;
+          padding: 1vw 0 1vw 1vw;
+          z-index: 999;
+          
+          .link:not(:last-child) {
+            margin-bottom: 2.5rem;
           }
 
-          & > a:hover {
+          .link:hover {
             font-weight: bold;
             cursor: pointer;
           }
-        }
-
-        .show-dropdown {
-          opacity: 1;
-          top: clamp(28.8px, 2vw, 36.2px);
-          pointer-events: all;
-        }
-
-        .hide-dropdown {
-          opacity: 0;
-          top: clamp(2.8px, 0.2vw, 3.6px);
-          pointer-events: none;
         }
       }
 

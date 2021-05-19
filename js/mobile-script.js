@@ -8,15 +8,15 @@ const accordions = document.querySelectorAll(".hamburger-menu__dropdown");
 menuButton.addEventListener("click", function () {
     if (menuButton.classList.contains("hamburger-icon")) {
         toggleButton("open");
-        showMenu()
+        showMenu();
     } else {
         toggleButton("close");
-        hideMenu()
+        hideMenu();
     }
 });
 
 accordionsBtn.forEach(accaordionBtn => {
-    accaordionBtn.addEventListener("click", function(e) {
+    accaordionBtn.addEventListener("click", function (e) {
         if (e.target.localName === "a") {
             accordion(e.target.innerText);
         }
@@ -54,12 +54,16 @@ function hideMenu() {
 function accordion(name) {
     switch (name) {
         case "Product":
+            /* e.target.classList.add("rotate-arrow"); */
             accordions.forEach(dropdown => {
-                if (dropdown.classList.contains("hamburger-menu__product__dropdown") && 
+                if (dropdown.classList.contains("hamburger-menu__product__dropdown") &&
                     dropdown.classList.contains("hide-accordion")) {
+                        dropdown.previousElementSibling.classList.add("rotate-arrow")
                     dropdown.classList.add("show-accordion");
                     dropdown.classList.remove("hide-accordion");
+
                 } else {
+                    dropdown.previousElementSibling.classList.remove("rotate-arrow")
                     dropdown.classList.remove("show-accordion");
                     dropdown.classList.add("hide-accordion");
                 }
@@ -67,11 +71,13 @@ function accordion(name) {
             break;
         case "Company":
             accordions.forEach(dropdown => {
-                if (dropdown.classList.contains("hamburger-menu__company__dropdown") && 
+                if (dropdown.classList.contains("hamburger-menu__company__dropdown") &&
                     dropdown.classList.contains("hide-accordion")) {
+                        dropdown.previousElementSibling.classList.add("rotate-arrow")
                     dropdown.classList.add("show-accordion");
                     dropdown.classList.remove("hide-accordion");
                 } else {
+                    dropdown.previousElementSibling.classList.remove("rotate-arrow")
                     dropdown.classList.remove("show-accordion");
                     dropdown.classList.add("hide-accordion");
                 }
@@ -79,19 +85,20 @@ function accordion(name) {
             break;
         case "Connect":
             accordions.forEach(dropdown => {
-                if (dropdown.classList.contains("hamburger-menu__connect__dropdown") && 
+                if (dropdown.classList.contains("hamburger-menu__connect__dropdown") &&
                     dropdown.classList.contains("hide-accordion")) {
+                        dropdown.previousElementSibling.classList.add("rotate-arrow")
                     dropdown.classList.add("show-accordion");
                     dropdown.classList.remove("hide-accordion");
                 } else {
+                    dropdown.previousElementSibling.classList.remove("rotate-arrow")
                     dropdown.classList.remove("show-accordion");
                     dropdown.classList.add("hide-accordion");
                 }
             })
             break;
-    
+
         default:
             break;
     }
 }
-

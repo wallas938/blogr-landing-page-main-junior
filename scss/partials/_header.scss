@@ -27,13 +27,13 @@
     }
 
     .hamburger-icon {
-      background-image: url("../../assets/images/icon-hamburger.svg");
+      background-image: url("assets/images/icon-hamburger.svg");
       width: 7vw;
       height: 5vw;
     }
 
     .close-icon {
-      background-image: url("../../assets/images/icon-close.svg");
+      background-image: url("assets/images/icon-close.svg");
       width: 7vw;
       height: 5vw;
     }
@@ -67,7 +67,7 @@
         }
 
         >a::after {
-          content: url("../../assets/images/icon-arrow-dark.svg");
+          content: url("assets/images/icon-arrow-dark.svg");
           margin-left: 2vw;
           transition: transform 250ms ease-in-out;
           display: inline-block;
@@ -169,7 +169,7 @@
           cursor: pointer;
 
           &::after {
-            content: url("../../assets/images/icon-arrow-light.svg");
+            content: url("assets/images/icon-arrow-light.svg");
             margin-left: clamp(11px, 0.8vw, 19px);
           }
         }

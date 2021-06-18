@@ -1,0 +1,229 @@
+h2 {
+  font-family: "Overpass", sans-serif;
+  font-weight: 600;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  position: relative;
+  z-index: 1;
+  font-size: 16px;
+}
+
+img {
+  width: 100%;
+}
+
+.intro {
+  background: -webkit-gradient(linear, left top, right top, from(#ff8f70), to(#ff3d54));
+  background: linear-gradient(90deg, #ff8f70, #ff3d54);
+  position: relative;
+  z-index: -1;
+  overflow: hidden;
+  padding-bottom: 5rem;
+  border-radius: 0 0 0 80px;
+}
+
+.intro > img {
+  position: absolute;
+  top: 40%;
+  left: 35%;
+  -webkit-transform: scale(4);
+          transform: scale(4);
+  z-index: -1;
+}
+
+p {
+  font-weight: 300;
+  font-family: "Ubuntu", sans-serif;
+  font-size: clamp(20px, 1.4vw, 34px);
+  line-height: clamp(43px, 3vw, 63px);
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+.illustration {
+  position: relative;
+  z-index: -10;
+  text-align: center;
+  padding: 5rem 0;
+}
+
+.illustration .desktop {
+  display: none;
+}
+
+.illustration h2 {
+  color: #1f3f5b;
+  margin: 2rem 0;
+  font-size: clamp(45px, 3vw, 82px);
+  font-weight: 600;
+}
+
+.illustration .illustration1 .illustration1__image {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.illustration .illustration1 div:not(:first-child) {
+  padding: 0 2.5rem 3rem 2.5rem;
+}
+
+.illustration .illustration1 div:not(:first-child) h2 {
+  margin-bottom: 1rem;
+}
+
+.illustration .illustration1 div:not(:first-child) p {
+  color: #4b5862;
+}
+
+.illustration .illustration2 {
+  position: relative;
+  padding: clamp(160px, 43vw, 287px) 0;
+  margin: clamp(192px, 51vw, 287px) 0 clamp(80px, 20vw, 287px) 0;
+  background-color: yellow;
+  border-radius: 0 100px 0 100px;
+  background-image: url(../images/bg-pattern-circles.svg), -webkit-linear-gradient(bottom, #2c2d3f, #3f4164);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain;
+}
+
+.illustration .illustration2 > .illustration2__image {
+  position: absolute;
+  top: -27%;
+}
+
+.illustration .illustration2 div:not(:first-child) {
+  padding: 0 2rem 3rem 2rem;
+}
+
+.illustration .illustration2 div:not(:first-child) h2 {
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.illustration .illustration2 div:not(:first-child) p {
+  color: #4b5862;
+  color: white;
+}
+
+.illustration .illustration3 {
+  margin-top: 5rem;
+}
+
+.illustration .illustration3 > h2 {
+  margin: 2rem 0;
+}
+
+.illustration .illustration3 div:not(:first-child) {
+  padding: 0 2.5rem 3rem 2.5rem;
+}
+
+.illustration .illustration3 div:not(:first-child) h2 {
+  margin: 1.5rem 0;
+}
+
+.illustration .illustration3 div:not(:first-child) p {
+  color: #4b5862;
+}
+
+@media screen and (min-width: 1440px) {
+  .illustration {
+    overflow: hidden;
+  }
+  .illustration .desktop {
+    display: unset;
+  }
+  .illustration .mobile {
+    display: none;
+  }
+  .illustration > h2 {
+    margin: clamp(144px, 10vw, 240px);
+  }
+  .illustration .illustration1 {
+    padding: 0 10rem;
+    margin-bottom: 20%;
+    position: relative;
+  }
+  .illustration .illustration1 .illustration1__image {
+    position: absolute;
+    top: -34%;
+    right: -18%;
+    width: 60%;
+  }
+  .illustration .illustration1 div:not(:first-child) {
+    text-align: left;
+    width: 75%;
+    width: 60%;
+  }
+  .illustration .illustration1 div:not(:first-child) > h2 {
+    font-size: clamp(30px, 2vw, 61px);
+  }
+  .illustration .illustration2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: left;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    /* padding: 4vw 2vw; */
+    padding: clamp(108px, 7vw, 145px) clamp(28.8px, 2vw, 48.8px);
+    margin-bottom: 20%;
+  }
+  .illustration .illustration2 div:not(:first-child) {
+    width: 53%;
+  }
+  .illustration .illustration2 div:not(:first-child) h2 {
+    font-size: clamp(38px, 2.7vw, 65px);
+  }
+  .illustration .illustration2 > .illustration2__image {
+    position: absolute;
+    /* top: -15%; */
+    top: clamp(-86.4px, -6vw, -146.4px);
+    left: clamp(14.4px, 1vw, 24.4px);
+    width: clamp(705px, 37vw, 902px);
+  }
+  .illustration .illustration3 {
+    padding-right: clamp(72px, 8vw, 195.2px);
+    margin-bottom: 20%;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: left;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .illustration .illustration3 .illustration3__image {
+    position: absolute;
+    top: -25%;
+    left: -278px;
+  }
+  .illustration .illustration3 div:not(:first-child) {
+    width: 60%;
+    padding-left: 10%;
+  }
+}
+/*# sourceMappingURL=illustration.css.map */

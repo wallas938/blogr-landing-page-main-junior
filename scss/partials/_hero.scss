@@ -11,7 +11,7 @@
 
   h1 {
     font-weight: 600;
-    font-size: clamp(24px, 7vw, 108px);
+    font-size: 9vw;
     margin: 0.7rem 0;
   }
 
@@ -23,7 +23,8 @@
 
   &__cta {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    
     button {
       @include btn-style;
 

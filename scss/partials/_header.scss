@@ -4,38 +4,38 @@
 
 /*  Mobile style */
 .header {
-  padding: clamp(30px, 7vw, 90px) clamp(18px, 5vw, 70px);
+  padding: 15vw 6vw 0vw 6vw;
 
   &__mobile-nav {
     display: flex;
     justify-content: space-between;
     cursor: pointer;
     width: 100%;
-    align-items: center;
+    align-items: flex-start;
     position: relative;
 
-    &__logo {
-      width: clamp(75px, 20vw, 150px);
+    .header__logo {
+      width: 24vw;
     }
 
     .menuButton {
-      width: 7vw;
-      height: 5vw;
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
     }
 
+    .hamburger-icon,
+    .close-icon {
+      width: 9vw;
+      height: 6vw;
+    }
+
     .hamburger-icon {
-      background-image: url("assets/images/icon-hamburger.svg");
-      width: 7vw;
-      height: 5vw;
+      background-image: url("../images/icon-hamburger.svg");
     }
 
     .close-icon {
-      background-image: url("assets/images/icon-close.svg");
-      width: 7vw;
-      height: 5vw;
+      background-image: url("../images/icon-close.svg");
     }
 
     .hamburger-menu {
@@ -67,7 +67,7 @@
         }
 
         >a::after {
-          content: url("assets/images/icon-arrow-dark.svg");
+          content: url("../images/icon-arrow-dark.svg");
           margin-left: 2vw;
           transition: transform 250ms ease-in-out;
           display: inline-block;
@@ -169,7 +169,7 @@
           cursor: pointer;
 
           &::after {
-            content: url("assets/images/icon-arrow-light.svg");
+            content: url("../images/icon-arrow-light.svg");
             margin-left: clamp(11px, 0.8vw, 19px);
           }
         }
@@ -186,7 +186,7 @@
           align-items: flex-start;
           padding: 1vw 0 1vw 1vw;
           z-index: 999;
-          
+
           .link:not(:last-child) {
             margin-bottom: 2.5rem;
           }

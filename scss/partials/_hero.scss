@@ -24,7 +24,7 @@
   &__cta {
     display: flex;
     justify-content: space-between;
-    
+
     button {
       @include btn-style;
 
@@ -43,9 +43,9 @@
         color: white;
 
         &:hover:last-child {
-            background-color: rgba($color: $white-text, $alpha: 1);
-            color: $light-red-for-cta-text;
-          }
+          background-color: rgba($color: $white-text, $alpha: 1);
+          color: $light-red-for-cta-text;
+        }
       }
     }
   }
@@ -53,19 +53,32 @@
 
 @media screen and (min-width: $desktop) {
   .hero {
+    padding: 0 clamp(2rem, 3vw, 32px);
     h1 {
       font-weight: 600;
+      font-size: 5vw;
+      margin-bottom: 1vw;
     }
 
     p {
-      margin: clamp(28px, 2vw, 48px) 0 clamp(72px, 5vw, 120px) 0;
+      margin-bottom: 4vw;
+      font-size: 1.5vw;
+      line-height: unset;
     }
 
     &__cta {
       justify-content: center;
 
       button {
+        @include btn-style;
+        color: $light-red-for-cta-text;
+        padding: 1.2vw 1.5vw;
+        font-size: clamp(16px, 1.3vw, 25px);
         margin: 0 1%;
+      }
+
+      button:last-child() {
+        border: 1.5px solid;
       }
     }
   }

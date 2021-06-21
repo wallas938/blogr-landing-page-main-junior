@@ -57,14 +57,15 @@
       flex-direction: column;
 
       span:first-child {
+        font-size: 1.1vw;
         margin-bottom: 1.5rem;
-        font-weight: 600;
+        font-weight: 700;
       }
 
       span:not(:first-child) {
         margin: 0.3rem 0;
         cursor: pointer;
-
+        font-size: 1.1vw;
         &:hover {
           text-decoration: underline;
         }

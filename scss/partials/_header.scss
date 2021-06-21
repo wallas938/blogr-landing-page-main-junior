@@ -199,9 +199,13 @@
       }
 
       .desktop-nav__right {
+        display: flex;
+
         button {
           @include btn-style;
           color: $light-red-for-cta-text;
+          padding: 1.2vw 3vw;
+          font-size: clamp(16px, 1.3vw, 25px);
 
           &:hover:last-child {
             background-color: rgba($color: lightgray, $alpha: 0.2);

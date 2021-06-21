@@ -184,7 +184,6 @@ a:visited {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  position: relative;
 }
 
 .header__mobile-nav .header__logo {
@@ -220,7 +219,7 @@ a:visited {
           flex-direction: column;
   overflow: hidden;
   top: 25vw;
-  left: 50%;
+  left: 50vw;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   width: 85vw;

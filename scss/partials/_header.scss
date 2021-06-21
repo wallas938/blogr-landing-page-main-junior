@@ -12,7 +12,6 @@
     cursor: pointer;
     width: 100%;
     align-items: flex-start;
-    position: relative;
 
     .header__logo {
       width: 24vw;
@@ -44,7 +43,7 @@
       flex-direction: column;
       overflow: hidden;
       top: 25vw;
-      left: 50%;
+      left: 50vw;
       transform: translateX(-50%);
       width: 85vw;
       background-color: $white-text;

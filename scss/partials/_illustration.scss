@@ -78,9 +78,12 @@
     margin-top: 5rem;
 
     .illustration3__image {
+      overflow: hidden;
       display: flex;
       justify-content: center;
-      align-items: center;
+      /* display: flex;
+      justify-content: center;
+      align-items: center; */
 
       img {
         width: auto;
@@ -169,6 +172,7 @@
       justify-content: flex-end;
       border-radius: 0 95px 0 95px;
       margin-bottom: 20vw;
+
       div:not(:first-child) {
         padding: unset;
         width: 45%;

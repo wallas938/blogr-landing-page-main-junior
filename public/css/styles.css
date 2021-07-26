@@ -721,6 +721,11 @@ a:visited {
   z-index: -10;
   text-align: center;
   padding: clamp(4.456rem, 19vw, 4.68rem) 0;
+  /* max-width: 60rem; // 960px
+  margin: 0 auto; */
+}
+
+.illustrations .illustration {
   max-width: 60rem;
   margin: 0 auto;
 }
@@ -742,7 +747,7 @@ a:visited {
 }
 
 .illustrations .illustration1 {
-  margin-bottom: 66vw;
+  margin-bottom: clamp(15.48rem, 66vw, 18rem);
 }
 
 .illustrations .illustration1 .illustration1__image {
@@ -765,6 +770,7 @@ a:visited {
 
 .illustrations .illustration2 {
   position: relative;
+  max-width: unset;
   padding-top: clamp(8.679rem, 20.8vw, 10.42rem);
   padding-bottom: clamp(2.345rem, 10vw, 4.17rem);
   background-color: yellow;
@@ -781,7 +787,7 @@ a:visited {
 }
 
 .illustrations .illustration2 div:not(:first-child) {
-  padding: clamp(2.11rem, 9vw, 2.3rem) clamp(2.11rem, 9vw, 2.3rem) 19vw clamp(2.11rem, 9vw, 2.3rem);
+  padding: clamp(2.11rem, 9vw, 2.3rem) clamp(2.11rem, 9vw, 2.3rem) clamp(4.456rem, 19vw, 5rem) clamp(2.11rem, 9vw, 2.3rem);
 }
 
 .illustrations .illustration2 div:not(:first-child) h2 {

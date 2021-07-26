@@ -2,11 +2,14 @@
   position: relative;
   z-index: -10;
   text-align: center;
-  padding:  clamp(4.456rem, 19vw, 4.68rem) 0;
-  max-width: 60rem; // 960px
-  margin: 0 auto;
+  padding: clamp(4.456rem, 19vw, 4.68rem) 0;
+  /* max-width: 60rem; // 960px
+  margin: 0 auto; */
 
   .illustration {
+    max-width: 60rem; // 960px
+    margin: 0 auto;
+
     .illustration__image {
       max-width: 400px;
       margin: 0 auto;
@@ -25,7 +28,7 @@
   }
 
   .illustration1 {
-    margin-bottom: 66vw;
+    margin-bottom: clamp(15.48rem, 66vw, 18rem);
 
     .illustration1__image {
       margin: 0 auto;
@@ -40,7 +43,7 @@
 
       p {
         color: $very-dark-grayish-blue-body-copy;
-        font-size: clamp(1rem , 4.3vw, 1.37rem);
+        font-size: clamp(1rem, 4.3vw, 1.37rem);
         line-height: 1.65em;
       }
     }
@@ -48,6 +51,7 @@
 
   .illustration2 {
     position: relative;
+    max-width: unset;
     padding-top: clamp(8.679rem, 20.8vw, 10.42rem);
     padding-bottom: clamp(2.345rem, 10vw, 4.170rem);
     background-color: yellow;
@@ -64,7 +68,10 @@
     }
 
     div:not(:first-child) {
-      padding: clamp(2.110rem, 9vw, 2.3rem) clamp(2.110rem, 9vw, 2.3rem) 19vw clamp(2.110rem, 9vw, 2.3rem);
+      padding: clamp(2.110rem, 9vw, 2.3rem) 
+      clamp(2.110rem, 9vw, 2.3rem) 
+      clamp(4.456rem, 19vw, 5rem) 
+      clamp(2.110rem, 9vw, 2.3rem);
 
       h2 {
         color: $white-text;
@@ -106,7 +113,7 @@
 
       p {
         color: $very-dark-grayish-blue-body-copy;
-        font-size: clamp(1rem , 4.3vw, 1.37rem);
+        font-size: clamp(1rem, 4.3vw, 1.37rem);
         line-height: 1.65em;
       }
     }

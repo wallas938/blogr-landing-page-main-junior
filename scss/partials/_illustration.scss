@@ -68,10 +68,7 @@
     }
 
     div:not(:first-child) {
-      padding: clamp(2.110rem, 9vw, 2.3rem) 
-      clamp(2.110rem, 9vw, 2.3rem) 
-      clamp(4.456rem, 19vw, 5rem) 
-      clamp(2.110rem, 9vw, 2.3rem);
+      padding: clamp(2.110rem, 9vw, 2.3rem) clamp(2.110rem, 9vw, 2.3rem) clamp(4.456rem, 19vw, 5rem) clamp(2.110rem, 9vw, 2.3rem);
 
       h2 {
         color: $white-text;
@@ -89,6 +86,7 @@
 
   .illustration3 {
     padding: 15vw 0;
+
     .illustration3__image {
       overflow: hidden;
       display: flex;
@@ -121,7 +119,8 @@
 }
 
 @media screen and (min-width: $desktop) {
-  .illustration {
+
+  .illustrations {
     overflow: hidden;
     padding: 10vw 0;
 
@@ -139,6 +138,14 @@
       margin-top: unset;
     }
 
+    .illustration {
+      max-width: unset;
+
+      .illustration__image {
+        max-width: unset !important;
+      }
+    }
+
     .illustration1 {
       padding: 0 10rem;
       margin-bottom: 20%;
@@ -146,9 +153,9 @@
 
       .illustration1__image {
         position: absolute;
-        top: -55%;
-        right: -20%;
-        width: 65%;
+        top: -52%;
+        right: -19%;
+        width: 63%;
       }
 
       div:not(:first-child) {
@@ -180,7 +187,7 @@
       padding-bottom: 8vw;
       justify-content: flex-end;
       border-radius: 0 95px 0 95px;
-      margin-bottom: 20vw;
+      margin-bottom: 17vw;
 
       div:not(:first-child) {
         padding: unset;
@@ -205,9 +212,10 @@
     }
 
     .illustration3 {
+      padding-top: 0;
       padding-right: 12vw;
       margin-top: unset;
-      margin-bottom: 12vw;
+      margin-bottom: 0;
       position: relative;
       display: flex;
       flex-direction: column;
@@ -216,8 +224,13 @@
 
       .illustration3__image {
         position: absolute;
-        top: -30%;
-        left: -19.31vw;
+        top: -23%;
+        left: -20%;
+        width: 66%;
+
+        img {
+          width: 100%;
+        }
       }
 
       div:not(:first-child) {
@@ -236,7 +249,7 @@
       }
 
       div:nth-child(2) {
-        margin-bottom: 5vw;
+        margin-bottom: 3vw;
       }
     }
   }

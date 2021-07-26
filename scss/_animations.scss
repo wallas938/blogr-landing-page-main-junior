@@ -20,6 +20,14 @@
   display: flex;
 }
 
+.hide {
+  display: none;
+}
+
+.hide-overflow {
+  overflow: hidden;
+}
+
 .hide-menu {
   display: none;
 }

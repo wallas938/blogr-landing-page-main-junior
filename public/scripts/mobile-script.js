@@ -1,9 +1,17 @@
 const menuButton = document.querySelector(".menuButton");
+const backdrop = document.querySelector(".backdrop");
 const menu = document.querySelector(".hamburger-menu");
 const accordionsBtn = document.querySelectorAll(".hamburger-menu__dropdown-container");
 const accordions = document.querySelectorAll(".hamburger-menu__dropdown");
 
 /** Event Listener */
+
+backdrop.addEventListener("click", function (e) {
+    if (e.target.classList.contains("backdrop") && !menuButton.classList.contains("hamburger-icon")) {
+        toggleButton("close");
+        hideMenu();
+    }
+});
 
 menuButton.addEventListener("click", function () {
     if (menuButton.classList.contains("hamburger-icon")) {
@@ -40,11 +48,15 @@ function toggleButton(status) {
 /** Menu */
 
 function showMenu() {
+    backdrop.classList.remove("hide");
+    document.body.classList.add("hide-overflow");
     menu.classList.add("show-menu");
     menu.classList.remove("hide-menu");
 }
 
 function hideMenu() {
+    backdrop.classList.add("hide");
+    document.body.classList.remove("hide-overflow");
     menu.classList.add("hide-menu");
     menu.classList.remove("show-menu");
 }

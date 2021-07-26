@@ -1,11 +1,17 @@
-@import "../global";
-@import "variables";
-
-.illustration {
+.illustrations {
   position: relative;
   z-index: -10;
   text-align: center;
-  padding: 19vw 0;
+  padding:  clamp(4.456rem, 19vw, 4.68rem) 0;
+  max-width: 60rem; // 960px
+  margin: 0 auto;
+
+  .illustration {
+    .illustration__image {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  }
 
   .desktop {
     display: none;
@@ -14,7 +20,7 @@
   h2 {
     color: $very-dark-blue-headings;
     margin: 2rem 0;
-    font-size: 7vw;
+    font-size: $mobile-h2; // 36px
     font-weight: 600;
   }
 
@@ -34,16 +40,16 @@
 
       p {
         color: $very-dark-grayish-blue-body-copy;
-        font-size: 4.3vw;
-        line-height: 7vw;
+        font-size: clamp(1rem , 4.3vw, 1.37rem);
+        line-height: 1.65em;
       }
     }
   }
 
   .illustration2 {
     position: relative;
-    padding-top: 37vw;
-    padding-bottom: 10vw;
+    padding-top: clamp(8.679rem, 20.8vw, 10.42rem);
+    padding-bottom: clamp(2.345rem, 10vw, 4.170rem);
     background-color: yellow;
     border-radius: 0 100px 0 100px;
     background-image: url(../images/bg-pattern-circles.svg),
@@ -58,32 +64,28 @@
     }
 
     div:not(:first-child) {
-      padding: 9vw 9vw 19vw 9vw;
+      padding: clamp(2.110rem, 9vw, 2.3rem) clamp(2.110rem, 9vw, 2.3rem) 19vw clamp(2.110rem, 9vw, 2.3rem);
 
       h2 {
         color: $white-text;
-        font-size: 10vw;
+        font-size: clamp(2.345rem, 10vw, 2.60rem);
       }
 
       p {
         color: $very-dark-grayish-blue-body-copy;
         color: $white-text;
-        font-size: 4.2vw;
-        line-height: 8vw;
+        font-size: clamp(0.98rem, 4.2vw, 1.091rem); // * 2.383
+        line-height: 1.75em;
       }
     }
   }
 
   .illustration3 {
-    margin-top: 5rem;
-
+    padding: 15vw 0;
     .illustration3__image {
       overflow: hidden;
       display: flex;
       justify-content: center;
-      /* display: flex;
-      justify-content: center;
-      align-items: center; */
 
       img {
         width: auto;
@@ -104,8 +106,8 @@
 
       p {
         color: $very-dark-grayish-blue-body-copy;
-        font-size: 4.2vw;
-        line-height: 8vw;
+        font-size: clamp(1rem , 4.3vw, 1.37rem);
+        line-height: 1.65em;
       }
     }
   }

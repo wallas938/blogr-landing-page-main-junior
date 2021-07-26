@@ -1,0 +1,154 @@
+@import "variables";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  width: 100%;
+  font-size: 16px;
+}
+
+body {
+  position: relative;
+  z-index: 1;
+}
+
+img {
+  width: 100%;
+}
+
+.intro {
+  background: linear-gradient(90deg,
+      $very-light-red-bg-grad,
+      $light-red-bg-grad);
+  position: relative;
+  z-index: -1;
+  overflow: hidden;
+  border-radius: 0 0 0 65px;
+  padding-bottom: 10vw;
+
+  >img {
+    position: absolute;
+    top: 40%;
+    left: 35%;
+    transform: scale(4);
+    z-index: -1;
+  }
+}
+
+h2 {
+  @extend %h2-heading;
+}
+
+p {
+  @include text;
+}
+
+a {
+  text-decoration: none;
+
+  &:visited {
+    color: inherit;
+  }
+}
+
+/*** Backdrop style ***/
+
+.backdrop {
+  position: fixed;
+  z-index: 99;
+  justify-content: center;
+  align-items: flex-start;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba($color: #CCC, $alpha: .3);
+
+  .hamburger-menu {
+    position: absolute;
+    text-align: center;
+    flex-direction: column;
+    overflow: hidden;
+    top: clamp(5.864rem, 25vw, 9.375rem);
+    left: 50%;
+    transform: translateX(-50%);
+    width: clamp(19.939rem, 85vw, 25rem);
+    max-width: 400px;
+    background-color: $white-text;
+    border-radius: 5px;
+    z-index: 1000;
+    padding: 2rem;
+
+    >div.hamburger-menu__dropdown-container {
+      overflow: hidden;
+      padding-bottom: 1.5rem;
+
+      a {
+        color: $very-dark-blue-headings;
+        font-family: $overpass;
+        font-weight: 600;
+      }
+
+      >a {
+        font-size: clamp(1.184rem, 5vw, 1.5rem);
+      }
+
+      >a::after {
+        content: url("../images/icon-arrow-dark.svg");
+        margin-left: .4em;
+        transition: transform 250ms ease-in-out;
+        display: inline-block;
+      }
+
+      .hamburger-menu__dropdown {
+        z-index: -1;
+        width: 100%;
+        display: flex;
+        margin: clamp(11.25px, 3vw, 40px) auto clamp(11.25px, 3vw, 40px) auto;
+        max-width: 21.875rem;
+        /* height: 25vh; */
+        border-radius: 5px;
+        flex-direction: column;
+        background-color: #efeff1;
+        transition: right 550ms ease-in-out;
+        padding: clamp(1.876rem, 8vw, 2.812rem);
+        >a {
+          font-size: clamp(17.05px, 4.5vw, 20px);
+          margin-bottom: 1.2em;
+        }
+      }
+    }
+
+    .hamburger-menu__cta {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2% 0;
+
+      button:first-child {
+        color: $very-dark-blue-headings;
+        background: $white-text;
+      }
+
+      button:last-child {
+        color: $white-text;
+      }
+
+      button {
+        @include btn-style;
+        background: linear-gradient(to right,
+            $very-light-red-bg-grad,
+            $light-red-bg-grad);
+        border: none;
+        width: 60%;
+      }
+    }
+  }
+}
